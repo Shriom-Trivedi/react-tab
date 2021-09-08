@@ -1,0 +1,93 @@
+/* utilities */
+li {
+    list-style: none;
+    padding: 25px;
+    border: 1px solid rgb(230, 230, 230);
+    cursor: pointer;
+    user-select: none;
+}
+
+p {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    text-align: justify;
+}
+
+p::selection {
+    background-color: darkgray;
+    color: white;
+}
+
+/* main styling */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+.wrapper {
+    height: 500px;
+    width: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 12px;
+}
+
+.tab-list {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tab:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    line-height: 1.8rem;
+    transition: all 20s ease-out;
+}
+
+.active {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.active:hover {
+    background-color: white;
+    cursor: default;
+}
+
+@media screen and (max-width: 786px) {
+    .wrapper {
+        height: 400px;
+        width: 350px;
+    }
+
+    .content {
+        line-height: 1.4rem;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
